@@ -3,20 +3,20 @@
 <h2>Burgers</h2>
 
 <ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{!-- {{> burgers/burger-block devoured=true}} --}}
-    {{/unless}}
+  {{#each undevoured}}
+  <div class="notDevoured">
+    <p>{{burger_name}}</p>
+  </div>
   {{/each}}
 </ul>
 
 <h2>Burgers eaten!</h2>
 
 <ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{!-- {{> burgers/burger-block devoured=false}} --}}
-    {{/if}}
+  {{#each devoured}}
+  <div class="devoured">
+    <p>{{burger_name}}</p>
+  </div>
   {{/each}}
 </ul>
 

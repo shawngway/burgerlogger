@@ -6,8 +6,12 @@ const burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
     burger.all(function(data) {
+      var devoured = []
+      var undevoured = []
+      data.filter(burger => burger.devoured ? devoured.push(burger) : undevoured.push(burger))
       var hbsObject = {
-        burgers: data
+        devoured: devoured,
+        undevoured: undevoured
       };
       console.log(hbsObject);
       res.render("index", hbsObject);
