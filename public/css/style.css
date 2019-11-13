@@ -17,4 +17,13 @@ li {
   .form-group {
     margin-bottom: 5px;
   }
+  .burgersToEat {
+    float: left;
+  }
+  .burgerimg {
+    float: left;
+  }
+  .burgersEaten {
+    float: left;
+  }
   
